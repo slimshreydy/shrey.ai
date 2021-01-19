@@ -30,8 +30,9 @@ export const Header = ({ siteTitle }) => (
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
       <Nav className="ml-auto">
-        <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
-        <Nav.Link as={Link} to="/projects">Projects</Nav.Link>
+        <Nav.Link as={Link} to="/blog">blog</Nav.Link>
+        <Nav.Link as={Link} to="/projects">projects</Nav.Link>
+        <Nav.Link href="https://twitter.com/slim_shreydy">tweets</Nav.Link>
       </Nav>
     </Navbar.Collapse>
   </StyledNavbar>

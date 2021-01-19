@@ -7,6 +7,7 @@ import { Layout } from '../components/Layout';
 
 const StyledH1 = styled.h1`
   font-size: 1.75rem;
+  margin-top: 1.75rem;
 `
 
 const HeroH1 = styled(StyledH1)`
