@@ -1,0 +1,32 @@
+{
+  "name": "shrey-ai",
+  "private": true,
+  "description": "Shrey's landing page and blog",
+  "version": "0.1.0",
+  "author": "Shrey Gupta <hey@shrey.ai>",
+  "dependencies": {
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "babel-plugin-styled-components": "^1.12.0",
+    "gatsby": "^2.30.3",
+    "gatsby-image": "^2.9.0",
+    "gatsby-plugin-mdx": "^1.8.0",
+    "gatsby-plugin-sharp": "^2.12.2",
+    "gatsby-plugin-styled-components": "^3.8.0",
+    "gatsby-remark-images": "^3.9.0",
+    "gatsby-source-filesystem": "^2.9.1",
+    "gatsby-transformer-sharp": "^2.10.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1"
+  },
+  "homepage": "https://github.com/slimshreydy/shrey.ai#readme",
+  "license": "0BSD",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slimshreydy/shrey.ai.git"
+  },
+  "scripts": {
+    "dev": "gatsby develop -p 8000 -o"
+  }
+}
