@@ -2,8 +2,9 @@
   --black: 26, 20, 35;
   --cream: 247, 236, 216;
   --red: 149, 25, 12;
+  --pure-white: 255, 255, 255;
   --text: var(--black);
-  --bg: var(--white);
+  --bg: var(--cream);
   --accent: var(--red);
   --white: var(--cream);
 }

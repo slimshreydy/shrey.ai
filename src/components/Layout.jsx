@@ -13,7 +13,7 @@ import '../styles/base.css';
 
 const App = styled(Container)`
   max-width: 700px;
-  background-color: rgba(var(--bg), 0.4);
+  background-color: rgba(var(--pure-white), 0.4);
   color: rgb(var(--text));
   margin-top: 2rem;
   margin-bottom: 2rem;
