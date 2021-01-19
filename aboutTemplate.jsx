@@ -13,8 +13,8 @@ export default ({ data }) => {
 };
 
 export const query = graphql`
-  query ABOUT_BODY_QUERY {
-    mdx(fields: { sourceInstanceName: { eq: "about" } }) {
+  query AboutFromSlug($slug: String!) {
+    mdx(fields: { slug: { eq: $slug } }) {
       body
     }
   }

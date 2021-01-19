@@ -3,15 +3,18 @@ const path = require(`path`);
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
+  const aboutTemplate = path.resolve(
+    'src/templates/aboutTemplate.jsx'
+  );
   const blogPostTemplate = path.resolve(
     'src/templates/blogPostTemplate.jsx'
   );
 
-  return graphql(`
+  const postsPromise = graphql(`
     {
       allMdx(
         sort: { fields: [frontmatter___date], order: DESC }
-        filter: { frontmatter: { published: { eq: true } } }
+        filter: { frontmatter: { published: { eq: true } }, fields: { sourceInstanceName: { eq: "posts" } } }
       ) {
         nodes {
           fields {
@@ -47,16 +50,29 @@ exports.createPages = ({ actions, graphql }) => {
       });
     });
   });
+
+  return postsPromise;
 };
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
   if (node.internal.type === `Mdx`) {
-    const value = createFilePath({ node, getNode });
+    const parentNode = getNode(node.parent);
+    let slug;
+    if (parentNode.sourceInstanceName == "about") {
+      slug = "about"
+    } else {
+      slug = createFilePath({ node, getNode });
+    }
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value: slug,
+    });
+    createNodeField({
+      name: `sourceInstanceName`,
+      node,
+      value: parentNode.sourceInstanceName,
     });
   }
 };
