@@ -5,10 +5,19 @@ import {Helmet} from "react-helmet";
 import styled from 'styled-components';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 import { Header } from './Header';
+import 'fontsource-raleway/400.css';
+import 'fontsource-taviraj/500.css';
+import 'fontsource-taviraj/600.css';
+import 'fontsource-taviraj/700.css';
 import '../styles/base.css';
 
 const App = styled(Container)`
   max-width: 700px;
+  background-color: rgba(var(--bg), 0.4);
+  color: rgb(var(--text));
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
 `;
 
 export const Layout = ({ children }) => {

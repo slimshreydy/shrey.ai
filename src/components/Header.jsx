@@ -5,13 +5,28 @@ import Navbar from 'react-bootstrap/Navbar';
 import styled from 'styled-components';
 
 const StyledNavbar = styled(Navbar)`
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 `;
 
+const StyledBrand = styled(Navbar.Brand)`
+  font-family: Taviraj;
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1ch;
+
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+`
+
 export const Header = ({ siteTitle }) => (
-  <StyledNavbar bg="light" expand="lg">
-    <Navbar.Brand as={Link} to="/">{siteTitle}</Navbar.Brand>
+  <StyledNavbar bg="transparent" expand="lg">
+    <StyledBrand as={Link} to="/">{siteTitle}</StyledBrand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
       <Nav className="ml-auto">

@@ -1,3 +1,21 @@
-html {
+:root {
+  --black: 26, 20, 35;
+  --cream: 247, 236, 216;
+  --red: 149, 25, 12;
+  --text: var(--black);
+  --bg: var(--white);
+  --accent: var(--red);
+  --white: var(--cream);
+}
+
+html, body {
     font-size: 18px;
+    background-color: rgb(247, 236, 216);
+    font-family: Raleway;
+    font-weight: 400;
+}
+
+h1, h2, h3 {
+    font-family: Taviraj;
+    font-weight: 500;
 }
