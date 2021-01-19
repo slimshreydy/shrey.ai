@@ -1,19 +1,27 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
+import Container from 'react-bootstrap/Container';
+import {Helmet} from "react-helmet";
 import styled from 'styled-components';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 import { Header } from './Header';
+import '../styles/base.css';
 
-const AppStyles = styled.main`
-  width: 800px;
-  margin: 0 auto;
+const App = styled(Container)`
+  max-width: 700px;
 `;
 
 export const Layout = ({ children }) => {
-  const { title, description } = useSiteMetadata();
+  const { title } = useSiteMetadata();
   return (
-    <AppStyles>
-      <Header siteTitle={title} siteDescription={description} />
-      {children}
-    </AppStyles>
+    <App>
+      <Helmet>
+        <title>Shrey Gupta</title>
+      </Helmet>
+      <Header siteTitle={title} />
+      <Container>
+        {children}
+      </Container>
+    </App>
   );
 };

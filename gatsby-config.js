@@ -1,6 +1,5 @@
 const siteMetadata = {
-  title: `The Localhost Blog`,
-  description: `This is my coding blog where I write about my coding journey.`,
+  title: `Shrey Gupta`
 };
 
 module.exports = {
