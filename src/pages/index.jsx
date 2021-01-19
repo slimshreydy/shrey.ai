@@ -11,7 +11,8 @@ const StyledH1 = styled.h1`
 `
 
 const HeroH1 = styled(StyledH1)`
-  font-weight: 700;
+  font-size: 2.25rem;
+  font-weight: 600;
 `
 
 // Source: https://codepen.io/Wking/pen/BdmpVx

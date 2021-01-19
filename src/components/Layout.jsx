@@ -8,7 +8,6 @@ import { Header } from './Header';
 import 'fontsource-raleway/400.css';
 import 'fontsource-taviraj/500.css';
 import 'fontsource-taviraj/600.css';
-import 'fontsource-taviraj/700.css';
 import '../styles/base.css';
 
 const App = styled(Container)`
