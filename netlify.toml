@@ -2,7 +2,7 @@
   for = "/*"
   [headers.values]
     Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
-    Content-Security-Policy = "default-src 'self' data: https:; script-src 'self'; object-src 'none'; style-src 'self'; img-src 'self' data: https:; media-src 'self' https:; frame-src 'none'; font-src 'self'; connect-src 'self' https:"
+    Content-Security-Policy-Report-Only = "default-src 'none'; script-src 'unsafe-inline' 'self'; style-src 'unsafe-inline' 'self'; img-src 'self' data: https:; media-src 'self' https:; font-src 'self'; connect-src 'self' https:"
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     X-XSS-Protection = "1; mode=block"
